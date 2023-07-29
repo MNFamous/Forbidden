@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 50196151}
   - component: {fileID: 50196150}
+  - component: {fileID: 50196152}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -207,6 +208,20 @@ Transform:
   m_Father: {fileID: 1899312004}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!136 &50196152
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50196149}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.51236844
+  m_Height: 7.187335
+  m_Direction: 1
+  m_Center: {x: -0.076303005, y: -0.021335363, z: 0.03490223}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,7 +309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 5.65, z: -8.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -493,6 +508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 993704195}
   - component: {fileID: 993704194}
+  - component: {fileID: 993704196}
   m_Layer: 0
   m_Name: Tree (1)
   m_TagString: Untagged
@@ -567,6 +583,20 @@ Transform:
   m_Father: {fileID: 1899312004}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!136 &993704196
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993704193}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.51236844
+  m_Height: 7.187335
+  m_Direction: 1
+  m_Center: {x: -0.076303005, y: -0.021335363, z: 0.03490223}
 --- !u!1 &1520588687
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,6 +608,8 @@ GameObject:
   - component: {fileID: 1520588689}
   - component: {fileID: 1520588688}
   - component: {fileID: 1520588690}
+  - component: {fileID: 1520588692}
+  - component: {fileID: 1520588691}
   m_Layer: 0
   m_Name: Guide
   m_TagString: Untagged
@@ -665,6 +697,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ed7791cd29517459e95c5daca92f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+--- !u!136 &1520588691
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520588687}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.565
+  m_Height: 5.53
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: -0.0000019073486}
+--- !u!54 &1520588692
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520588687}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
 --- !u!1 &1899312002
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,5 +788,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a2ed624ffc7e02438491a7a82e37d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wroldRotation: {x: 45, y: 0, z: 0}
-  playgroundObjects: []
+  worldRotation: {x: 45, y: 0, z: 0}
