@@ -5,25 +5,15 @@ using UnityEngine;
 public class move : MonoBehaviour
 {
     public float speed;
-    void Start()
-    {
-        
-    }
+    public Vector3 rotation;
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W)){
-            this.transform.position += (new Vector3(0,0,1)) * Time.deltaTime * speed;
-        }
-        if (Input.GetKey(KeyCode.A)){
-            this.transform.position += (new Vector3(-1,0,0)) * Time.deltaTime * speed;
-        }
-        if (Input.GetKey(KeyCode.D)){
-            this.transform.position += (new Vector3(1,0,0)) * Time.deltaTime * speed; 
-        }
-        if (Input.GetKey(KeyCode.S)){
-            this.transform.position += (new Vector3(0,0,-1)) * Time.deltaTime * speed;
-        }
+        rotation = WorldManager.Instance.worldRotation;
+
+        this.transform.position += 
+            (Quaternion.AngleAxis(rotation.y, Vector3.up)
+            * new Vector3(Input.GetAxisRaw("Horizontal"),0,Input.GetAxisRaw("Vertical"))) 
+            * Time.deltaTime * speed;
     }
 }
