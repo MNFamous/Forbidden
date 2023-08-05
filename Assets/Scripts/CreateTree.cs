@@ -17,6 +17,7 @@ public class CreateTree : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 100))
         {
             Debug.DrawLine(ray.origin, hit.point, Color.green);
+            Debug.DrawLine(hit.point, new Vector3(hit.point.x, 10 , hit.point.z), Color.green, 2f);
         }
         if(Input.GetMouseButtonUp(0))
         {
@@ -51,7 +52,7 @@ public class CreateTree : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100))
             {
-                Instantiate(tree,new Vector3(hit.point.x,1.877482f,hit.point.z), Quaternion.identity, playground.transform);
+                Instantiate(tree,new Vector3(hit.point.x,0.3774824f,hit.point.z), Quaternion.identity, playground.transform);
                 Debug.Log(hit.point);
             }
     }
