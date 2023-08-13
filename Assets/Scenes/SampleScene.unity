@@ -392,6 +392,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2286265432011564298, guid: b47559a82019e034581e181ad6f82e64, type: 3}
   m_PrefabInstance: {fileID: 585425330}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1560869416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2847777241031378573, guid: 513fc980126b7e04d90b6abc0b9590a0, type: 3}
+  m_PrefabInstance: {fileID: 2847777242484592898}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1560869421 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 2847777241031378582, guid: 513fc980126b7e04d90b6abc0b9590a0, type: 3}
+  m_PrefabInstance: {fileID: 2847777242484592898}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1560869423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560869416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5b5d4925407f346ba61d3aeff00ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - itemType: {fileID: 11400000, guid: 5fc1b5c1fa5f36944922175a40703a32, type: 2}
 --- !u!1 &1899312002
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,6 +546,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guide
       objectReference: {fileID: 0}
+    - target: {fileID: 2847777241031378576, guid: 513fc980126b7e04d90b6abc0b9590a0, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1560869421}
     - target: {fileID: 2847777241031378579, guid: 513fc980126b7e04d90b6abc0b9590a0, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -574,5 +602,21 @@ PrefabInstance:
       propertyPath: playground
       value: 
       objectReference: {fileID: 1899312002}
+    - target: {fileID: 2847777241031378582, guid: 513fc980126b7e04d90b6abc0b9590a0, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847777241031378582, guid: 513fc980126b7e04d90b6abc0b9590a0, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847777241031378582, guid: 513fc980126b7e04d90b6abc0b9590a0, type: 3}
+      propertyPath: m_Interpolate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847777241031378582, guid: 513fc980126b7e04d90b6abc0b9590a0, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 513fc980126b7e04d90b6abc0b9590a0, type: 3}
