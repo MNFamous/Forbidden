@@ -25,7 +25,7 @@ public class RotationManager : MonoSingleton<RotationManager>
     {
         foreach (GameObject gameObject in WorldManager.Instance.GetChilderen())
         {
-            _leftRotate = new Vector3(45, gameObject.transform.rotation.eulerAngles.y + rotationAmount ,0);
+            _leftRotate = new Vector3(WorldManager.Instance.worldRotation.x, gameObject.transform.rotation.eulerAngles.y + rotationAmount ,0);
             gameObject.transform.rotation = Quaternion.Euler(_leftRotate);
         }
         WorldManager.Instance.worldRotation = _leftRotate;
